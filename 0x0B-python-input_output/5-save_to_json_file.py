@@ -1,9 +1,19 @@
 #!/usr/bin/python3
-"""Defines a JSON file-writing function."""
+"""Module: 5-save_to_json_file
+This is a function that writes an Object to a text file, using a JSON representation
+"""
+
+
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """Write an object to a text file using JSON representation."""
-    with open(filename, "w") as f:
+    """Writes an object to a text file using a JSON representation
+
+    Args:
+        - my_obj: the json object
+        - filename: the name of the file
+    """
+    
+    with open(filename, 'w+') as f:
         json.dump(my_obj, f)
